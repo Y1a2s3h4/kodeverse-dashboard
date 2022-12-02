@@ -9,6 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import KodeGrayLogo from "./kode-gray-logo.svg"
 import NetworkGrayLogo from "./network-gray.png"
 import 'react-pro-sidebar/dist/css/styles.css';
+import Spinner from './components/Spinner';
+
 export default function Dashboard() {
     const updateModalRef = useRef()
     const initialState = {
@@ -172,7 +174,8 @@ export default function Dashboard() {
         <h1><b>View all job posts</b></h1>
         <div className="row flex-wrap justify-content-between">
             {
-                allJobs.map((e) => (
+                // <Spinner />
+                allJobs.length === 0 ? <div className="col-md-3 flex-wrap"><Spinner /></div> : allJobs.map((e) => (
                     <div className="col-md-3 flex-wrap" key={uuidv4()}>
                         <div className="card cursor-pointer m-3" style={{ minWidth: "15rem", maxWidth: "20rem" }}>
                             <div className="p-5">

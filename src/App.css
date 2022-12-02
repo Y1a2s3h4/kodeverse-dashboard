@@ -150,6 +150,7 @@ img.company_logo {
 }
 .pro-sidebar {
   height: auto !important;
+  min-height: 100vh !important;
 }
 @keyframes ldio-n5zkmlsekm9 {
   0% {
